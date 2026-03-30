@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="main-header">
@@ -15,10 +16,10 @@
             <nav class="nav-links">
             <ul>
                 <li>
-                    <a href="#">Sobre Mim</a>
+                    <a href="#sobre-mim">Sobre Mim</a>
                 </li>
                 <li>
-                    <a href="#">Projetos</a>
+                    <a href="#projetos">Projetos</a>
                 </li>
                 <li>
                     <a href="#">Tecnologias</a>
@@ -43,12 +44,12 @@
                 
                 <div class="botoes-acao">
                     <a href="#projetos" class="btn btn-primario">Ver Projetos</a>
-                    <a href="#sobre" class="btn btn-secundario">Sobre mim</a>
+                    <a href="#sobre-mim" class="btn btn-secundario">Sobre mim</a>
                 </div>
             </div>
         </section>
 
-        <section class="sobre-mim">
+        <section class="sobre-mim" id="sobre-mim">
         <div>
             <h1 class="sobre">Sobre Mim</h1>
             <p>Sou Kauã Victor, desenvolvedor web em formação e apaixonado por tecnologia. Atualmente estudo e pratico desenvolvimento utilizando HTML, CSS, JavaScript e também tecnologias backend como Java, Spring Boot e MySQL.
@@ -58,6 +59,39 @@
             Tenho interesse em crescer na área de tecnologia, construir projetos cada vez mais completos e conquistar minha primeira oportunidade profissional como desenvolvedor.
             </p>
         </div>
+        </section>
+
+        <section class="projetos" id="projetos">
+    <h1>Meus Projetos</h1>
+    <div class="projetos-grid">
+        <div class="projeto-card">
+            <div class="projeto-imagem">
+                <img src="res/spaceshooter.png" alt="Preview Space Shooter">
+            </div>
+            <div class="projeto-info">
+                <h3>Space Shooter Java</h3>
+                <p>Um jogo de nave desenvolvido em Java explorando conceitos de POO.</p>
+                <a href="https://github.com/KauaVictor-dev/SpaceShooter-Java" target="_blank" class="btn-repo">Ver Repositório</a>
+            </div>
+        </div> <div class="projeto-card">
+            <div class="projeto-imagem">
+                <img src="res/fanta.png" alt="Preview Site">
+            </div>
+            <div class="projeto-info">
+                <h3>Site de Refrigerante</h3>
+                <p>Um Site de Refrigerantes simples e responsivo.</p>
+                <a href="https://github.com/KauaVictor-dev/Site-de-Refrigerante" target="_blank" class="btn-repo">Ver Repositório</a>
+            </div>
+        </div> <div class="projeto-card">
+            <div class="projeto-imagem">
+                <img src="res/coffe.png" alt="Preview Coffee">
+            </div>
+            <div class="projeto-info">
+                <h3>Brothers Coffee</h3>
+                <p>Interface moderna para uma cafeteria fictícia.</p>
+                <a href="https://github.com/KauaVictor-dev/Brothers-Coffe" target="_blank" class="btn-repo">Ver Repositório</a>
+            </div>
+        </div> </div> </section>
 </main>
     
     <footer>

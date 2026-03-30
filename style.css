@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(to right, #081526, #0A192F);
@@ -43,6 +47,12 @@ body {
     gap: 2rem;
     text-decoration: none;
     
+}
+
+.nav-links a {
+    border: 2px solid #d5e4e0;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .nav-links a:hover {
@@ -91,6 +101,10 @@ body {
     opacity: 0.7;
 }
 
+.sobre-mim, .projetos {
+    scroll-margin-top: 110px;
+}
+
 .sobre-mim {
     max-width: 700px;
     margin: 120px auto;
@@ -110,6 +124,81 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
+
+
+/* Container que segura todos os cards */
+.projetos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* O Card individual */
+.projeto-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(99, 242, 202, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Ajuste da Imagem */
+.projeto-imagem img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/* Texto do Card */
+.projeto-info {
+    flex: 1;
+}
+
+.projeto-info h3 {
+    color: #63F2CA;
+    margin-bottom: 10px;
+}
+
+.projeto-info p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.btn-repo {
+    font-size: 0.9rem !important;
+    color: #63F2CA !important;
+    border: 1px solid #63F2CA;
+    padding: 5px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-repo:hover {
+    background: #63F2CA;
+    color: #0A192F !important;
+}
+
+@media (max-width: 600px) {
+    .projeto-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .projeto-imagem img {
+        width: 100%;
+    }
+}
+
+
 
 h1 {
     color: #63F2CA;
