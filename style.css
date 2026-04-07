@@ -45,11 +45,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 12px;
+    padding: 30px;
     list-style: none;
     gap: 2rem;
     text-decoration: none;
-    font-size: 0.7em;
+    font-size: 1.2em;
     background-color: #06101c;  
     position: relative;
     
@@ -115,54 +115,57 @@ body {
 
 .inicio .saudacao {
     color: #818DA6;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .inicio .nome-destaque {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .inicio .profissao {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .inicio .descricao {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 
 .inicio a {
     font-size: 1.1em;
-    padding: 0.8em 1.5em;
+    padding: 1em 1.5em;
     margin-top: 20px;
     display: inline-block;
     border: 2px solid #63F2CA;
     border-radius: 8px;
+    transition: 0.3s ease;
 }
-    
 
 
 .inicio a:hover {
-    opacity: 0.7;
+    transform: translateY(-2px);
 }
 
-.sobre-mim, .projetos {
+.sobre-mim,
+.projetos {
     scroll-margin-top: 110px;
 }
 
 .sobre-mim {
     max-width: 700px;
-    margin: 120px auto;
+    margin: 100px auto;
     padding: 30px;
-    background: rgba(255,255,255,0.03);
+    background: #111f33;
     border-radius: 12px;
-    backdrop-filter: blur(10px);
+    position: relative;
+    color: #ffffff;
 }
+
 
 .sobre-mim p {
     text-align: justify;
-    line-height: 1.8;
-    font-size: 10px;
+    line-height: 1.7;
+    font-size: 16px; 
 }
 
 .sobre-mim h1 {
@@ -171,7 +174,44 @@ body {
 }
 
 
-/* Container que segura todos os cards */
+@property --angle1 {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.sobre-mim::before,
+.sobre-mim::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: conic-gradient(
+        from var(--angle1),
+        transparent,
+        #21424b,
+        transparent
+    );
+    border-radius: 14px;
+    z-index: -1;
+    animation: spin1 4s linear infinite;
+}
+
+.sobre-mim::before {
+    filter: blur(20px);
+    opacity: 0.4;
+}
+
+
+@keyframes spin1 {
+    from {
+        --angle1: 0deg;
+    }
+    to {
+        --angle1: 360deg;
+    }
+}
+
+
 .projetos-grid {
     display: flex;
     flex-direction: column;
@@ -179,7 +219,7 @@ body {
     margin-top: 2rem;
 }
 
-/* O Card individual */
+
 .projeto-card {
     display: flex;
     align-items: center;
